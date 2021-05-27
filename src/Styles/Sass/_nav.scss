@@ -2,4 +2,7 @@
 .nav{
     display: grid;
     grid-template-columns: repeat(3, 1fr);
+    div{
+        margin: 10px;
+    }
 }
