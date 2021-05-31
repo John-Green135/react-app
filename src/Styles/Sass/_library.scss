@@ -1,0 +1,58 @@
+@import './styles';
+@import './mix-ins';
+
+.component-main{
+    margin: 0 0;
+}
+
+.select-section{
+    position: grid;
+    padding: 0 0 50px 0;
+    
+}
+
+.sticky{
+    position: sticky;
+    background-color: black;
+    text-align: center;
+    top: 0;
+}
+
+.none{
+    display: none
+}
+
+.pagination-grid{
+    display: grid;
+    grid-template-columns: repeat(10, 1fr);
+    grid-gap: 10px;
+    margin: 5% 0 5% 0;
+    .page-number-div, .selected-page{
+        @include divTemplate();
+    }
+    .selected-page{
+        border: 2px solid $primaryGold;
+        h2{
+            color: $primaryGold;
+        }
+    }
+}
+
+.footer-main{
+    height: 150px;
+}
+
+.loading-gif{
+    position: absolute;
+    margin: 5% 0 0 0;
+    top: 30%;
+    left: 30%;
+    height: 40%;
+    width: 40%;
+    margin: 0 auto;
+    transition: 500ms;
+    img{
+        height: 100%;
+        width: 100%;
+    }
+}

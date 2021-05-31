@@ -1,0 +1,6 @@
+$main-color: rgba(235, 34, 20, 0.733);
+$sub-color:  rgb(68, 25, 14);
+$primaryGold: rgb(251, 202, 39);
+
+$body-gradient: linear-gradient(to right, rgb(117, 21, 21), rgb(68, 25, 14), rgb(0, 0, 0), rgb(117, 21, 21), rgb(68, 25, 14), );
+$div-gradient: linear-gradient(to bottom, $main-color, $sub-color, $main-color) ;

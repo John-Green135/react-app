@@ -1,0 +1,51 @@
+@import './styles';
+
+@mixin divTemplate {
+    background-image: $div-gradient;
+    background-color: rgb(94, 17, 17);
+    border: 2px inset $sub-color;
+    border-radius: 10px;
+    text-align: center;
+    cursor: pointer;
+    transition: 500ms;
+    
+    &:hover{
+        
+        transform: scale(1.05);
+        border: 2px solid $primaryGold;
+    }
+
+}    
+
+@mixin TableStyle {
+    table{
+        height: auto;
+        width: 100%;
+        tbody{
+            width: 100%;
+            line-height: 30px;
+            tr{
+                width: 100%;
+                .one{
+                    width:25;
+                }
+                .two{
+                    width: 50%;
+                }
+            }
+            td{
+                color: $primaryGold;
+                font-weight: 600;
+                width: 15%;
+                background-color: $main-color;
+                border-radius: 8px 0 0 8px;
+                text-align: center;
+            }
+            th{
+                background-color: rgba(43, 6, 6, 0.61);
+                border: 2px solid $main-color;
+            }
+        }
+
+    }
+}

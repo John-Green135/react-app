@@ -1,0 +1,96 @@
+@import './styles';
+@import './mix-ins';
+
+.component-nav{
+    position: relative;
+    height: 15%;
+    font-size: 14px;
+    .search-helper{
+        font-weight: 800;
+        height: 10%;
+        padding: 5% 0 0 0;
+        font-size: 1em;
+        span{
+            color: $primaryGold;
+        }
+    }
+    .searchbar{
+        .searchbar-input{
+            color: black;
+            width: 50%;
+            height: 10%;
+            font-size: 1em;
+            border-radius: 10px;
+            border: 2px inset $sub-color;
+            margin: 0 0 0 0;
+            padding: 2px;
+        }   
+    }
+
+    .search-list-div{
+        position: absolute;
+        font-size: 1em;
+        top: 105%;
+        background-color: rgb(94, 17, 17);
+        border: 2px inset $sub-color;
+        border-radius: 8px;
+        width: 50%;
+        max-height: 50vh;
+        overflow-y: scroll;
+        z-index: 2;
+        p{
+            font-size: 1em;
+            border-radius: 12px;
+            padding: 8px;
+            cursor: pointer;
+            text-transform: capitalize;
+            &:hover{
+                color: $primaryGold;
+                background-color: rgb(10, 11, 85);
+            }
+        }
+    }
+}    
+
+
+.custom-select{
+    @include divTemplate();
+    position: absolute;
+    width: 20%;
+    height: 35px;
+    overflow-y: hidden;
+    cursor: pointer;
+    z-index: 3;
+    top: 0;
+    h2{
+        text-transform: capitalize;
+    }
+    .select{
+        .current-value{
+            color: $primaryGold;
+        }
+        width: 100%;
+        h2{
+            font-size: 1.1em;
+            padding: 5px;
+        }
+    }
+    
+    .option-box{
+        .selected-option{  
+            pointer-events: none;
+            h2{
+                font-size: 1.1em;
+                color: grey;
+                
+            }
+        }
+        .option{
+            width: 100%;
+            border-radius: 12px;
+            &:hover{
+                background-color: rgb(10, 11, 85);
+            }
+        }
+    }
+}

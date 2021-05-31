@@ -1,0 +1,47 @@
+@import './styles';
+@import './mix-ins';
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color: white;
+}
+
+body{
+    background-image: $body-gradient;
+}
+
+a{
+    text-decoration: none;
+}
+
+span{
+    color: $primaryGold;
+    text-transform: capitalize;
+}
+
+button{
+    width: 50px;
+}
+
+.App{
+    background-color: transparent;
+    //width: 1200px;
+    margin: 0 auto;
+    header{
+        display: grid;
+        grid-template-columns: 3fr 2fr;
+    }
+}
+
+header{
+    padding: 2% 0 0 0;
+    .username{
+        @include divTemplate();
+    }
+}
+
+
+
+

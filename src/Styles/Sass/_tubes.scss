@@ -1,0 +1,27 @@
+@import './styles';
+@import './mix-ins';
+
+.tubes-main{
+    width: 90%;
+    margin: 0 auto;
+    padding: 20px 0 0 0;
+    .tubes-grid{
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        grid-gap: 10px;
+        margin: 10vh 0 0 0;
+        .tube-div{
+            padding: 15px;
+            @include divTemplate();
+            a{
+                color: $primaryGold;
+                font-size: 16px;
+                font-weight: bold;
+                text-decoration: none;
+            }
+            h2{
+                font-size: 16px;
+            }
+        }
+    }
+}
