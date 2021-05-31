@@ -4,6 +4,7 @@ import '../Styles/Css/main.css'
 
 import Navbar from '../Components/Navbar/Navbar'
 import TubesDisplay from '../Components/Tubes/Display/TubesDisplay'
+import WebcamsDisplay from '../Components/Webcams/Display/WebcamsDisplay'
 import PornstarDisplay from '../Components/Pornstars/Display/PornstarsDisplay'
 
 function App() {
@@ -21,6 +22,10 @@ function App() {
               </Route>
               <Route path = {"/tubes"}>
                   <TubesDisplay />
+              </Route>
+
+              <Route path = {"/webcams"}>
+                  <WebcamsDisplay />
               </Route>
               
               <Route exact path = {"/pornstars"}>
