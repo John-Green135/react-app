@@ -1,0 +1,34 @@
+@import './styles';
+@import './mix-ins';
+
+.navbar-main{
+    padding: 10px 0 0 0;
+    .nav-links-section{
+        display: grid;
+        grid-template-columns: repeat(8, 1fr);
+        grid-gap: 6px;
+        h2{
+            color: $primaryGold;
+            font-size: 16px;
+            font-weight: bold;
+            text-transform: capitalize;
+        }
+        .link{
+            @include divTemplate();
+            padding: 10px;
+            
+        }
+        .selected-link{
+            @include divTemplate();
+            border: 2px solid $primaryGold;
+            padding: 10px;
+            pointer-events: none;
+        }
+    }
+}
+
+
+
+
+
+

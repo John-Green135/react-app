@@ -121,6 +121,57 @@ header .username:hover {
   width: 100%;
 }
 
+.navbar-main {
+  padding: 10px 0 0 0;
+}
+
+.navbar-main .nav-links-section {
+  display: grid;
+  grid-template-columns: repeat(8, 1fr);
+  grid-gap: 6px;
+}
+
+.navbar-main .nav-links-section h2 {
+  color: #fbca27;
+  font-size: 16px;
+  font-weight: bold;
+  text-transform: capitalize;
+}
+
+.navbar-main .nav-links-section .link {
+  background-image: linear-gradient(to bottom, rgba(235, 34, 20, 0.733), #44190e, rgba(235, 34, 20, 0.733));
+  background-color: #5e1111;
+  border: 2px inset #44190e;
+  border-radius: 10px;
+  text-align: center;
+  cursor: pointer;
+  transition: 500ms;
+  padding: 10px;
+}
+
+.navbar-main .nav-links-section .link:hover {
+  transform: scale(1.05);
+  border: 2px solid #fbca27;
+}
+
+.navbar-main .nav-links-section .selected-link {
+  background-image: linear-gradient(to bottom, rgba(235, 34, 20, 0.733), #44190e, rgba(235, 34, 20, 0.733));
+  background-color: #5e1111;
+  border: 2px inset #44190e;
+  border-radius: 10px;
+  text-align: center;
+  cursor: pointer;
+  transition: 500ms;
+  border: 2px solid #fbca27;
+  padding: 10px;
+  pointer-events: none;
+}
+
+.navbar-main .nav-links-section .selected-link:hover {
+  transform: scale(1.05);
+  border: 2px solid #fbca27;
+}
+
 .component-nav {
   position: relative;
   height: 15%;
