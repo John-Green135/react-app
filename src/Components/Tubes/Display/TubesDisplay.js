@@ -1,19 +1,17 @@
-import React, {useState, useEffect} from 'react';
+import React, {useState, useContext, useEffect} from 'react';
 import Searchbar from '../../Global/searchbar'
+import LoadingGif from '../../Global/loadingGif'
+import {tubeQueryContext} from '../../../Systems/store'
 import {getTubesData} from './Ext/getTubesData'
 
 const TubesDisplay = ()=>{
     const [state, setState] = useState([])
-    const [queries, setQueries] = useState({
-        search: ""
-    })
+    const [queries, setQueries] = useContext(tubeQueryContext)
 
     useEffect(()=>{
-        console.log("useEffect")
         getTubesData()
         .then(value=>{
-            console.log(value)
-            setState(value)
+                setState(value)
         })
     }, [])
 
@@ -41,7 +39,7 @@ const TubesDisplay = ()=>{
                  </a>
                     ))}
                 </section>
-            : <h2>Loading . . .</h2>}
+            : <LoadingGif />}
         </main>
     )
 }
