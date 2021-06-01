@@ -1,19 +1,39 @@
 import React, {useState, useContext, useEffect} from 'react';
+import {tubeQueryContext} from '../../../Systems/store'
+
+import {getTubesData} from './Ext/getTubesData'
 import Searchbar from '../../Global/searchbar'
 import LoadingGif from '../../Global/loadingGif'
-import {tubeQueryContext} from '../../../Systems/store'
-import {getTubesData} from './Ext/getTubesData'
+import CustomSelect from '../../Global/customSelect'
 
 const TubesDisplay = ()=>{
-    const [state, setState] = useState([])
+    const [state, setState] = useState({
+        tubes: [],
+        categories: []
+    })
     const [queries, setQueries] = useContext(tubeQueryContext)
 
     useEffect(()=>{
-        getTubesData()
+        getTubesData(queries)
         .then(value=>{
-                setState(value)
+            setState(value)
         })
-    }, [])
+    }, [queries])
+
+
+    const setOptions = (type, query)=>{
+        switch (type) {
+            case "category":
+                setQueries({
+                    ...queries,
+                    category: query
+                })
+                break;
+        
+            default:
+                break;
+        }
+    }
 
 
     return(
@@ -21,12 +41,16 @@ const TubesDisplay = ()=>{
 
             <section className = "component-nav">
                 <div className="search-helper">
-                    {queries.search === "" ? 
+                    {queries.search === "nothing" ? 
                     <p>Type your Search . .</p>
                     :<p>Choose a tube to search for <span>{queries.search}</span></p>    
                 }
                 </div>
                 <Searchbar queries = {queries} setQueries = {setQueries}/>
+
+                <CustomSelect class_key = {"category"} selectedValue = {queries.category} type = {"category"}
+                 setOption = {setOptions} options = {state.categories} index = {0}/>
+
             </section>
 
             {state.tubes ?
