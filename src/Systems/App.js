@@ -5,7 +5,8 @@ import '../Styles/Css/main.css'
 import Navbar from '../Components/Navbar/Navbar'
 import TubesDisplay from '../Components/Tubes/Display/TubesDisplay'
 import WebcamsDisplay from '../Components/Webcams/Display/WebcamsDisplay'
-import PornstarDisplay from '../Components/Pornstars/Display/PornstarsDisplay'
+import PornstarDisplay from '../Components/Pornstars/Display/PornstarDisplay'
+import PornstarProfile from '../Components/Pornstars/Profile/PornstarProfile'
 
 function App() {
  
@@ -30,6 +31,10 @@ function App() {
               
               <Route exact path = {"/pornstars"}>
                   <PornstarDisplay />
+              </Route>
+
+              <Route exact path = {"/pornstars/:model"}>
+                  <PornstarProfile />
               </Route>
              
             </Switch>

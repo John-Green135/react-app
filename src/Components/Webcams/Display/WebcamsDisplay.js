@@ -38,7 +38,7 @@ const WebcamsDisplay = ()=>{
     return(
         <main className = "webcams-main">
 
-            {state.tagList && <section classname = "component-nav">
+            {state.tagList && <section className = "component-nav">
 
                 <CustomSelect class_key = {"gender"} selectedValue = {queries.gender} type = {"gender"}
                  setOption = {setOptions} options = {["female", "trans", "male", "couple"]} index = {0}/>

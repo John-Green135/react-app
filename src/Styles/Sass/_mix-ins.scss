@@ -3,7 +3,7 @@
 @mixin divTemplate {
     background-image: $div-gradient;
     background-color: rgb(94, 17, 17);
-    border: 2px inset $sub-color;
+    border: 2px ridge $sub-color;
     border-radius: 10px;
     text-align: center;
     cursor: pointer;

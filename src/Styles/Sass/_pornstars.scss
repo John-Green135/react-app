@@ -1,0 +1,135 @@
+@import './styles';
+@import './mix-ins';
+
+.model-display-main{
+    padding: 20px 0 0 0;
+    width: 90%;
+    margin: 0 auto;
+    .model-display-grid{
+        display: grid;
+        grid-template-columns: repeat(6, 1fr);
+        grid-gap: 4px;
+        margin: 10vh 0 0 0;
+        .model-div{
+            height: 250px;
+            width: 160px;
+            padding: 5px;
+            @include divTemplate();
+            img{
+                border-radius: 5px;
+                height: 90%;
+                width: 100%;
+            }
+            h3{
+                text-align: center;
+            }
+            .long{
+                font-size: 16px;
+            }
+            .short{
+                font-size: 18px;
+            }
+        }
+    }
+}
+
+.pornstar-profile-main{
+    width: 90%;
+    margin: 5% auto 0 auto;
+    .model-profile-grid{
+        display: grid;
+        grid-template-columns: 1fr 2fr;
+        .img-div{
+            height: auto;
+            width: 90%;
+            img{
+                height: 100%;
+                width: 100%;
+            }
+        }
+    }
+}
+
+.top-section{
+    display: grid;
+    grid-template-columns: 40% 60%; 
+    margin: 0 0 15px 0; 
+    .model-name{
+        background-color: rgba(112, 14, 14, 0.336);
+        background-image: $body-gradient;
+        border-radius: 15px;
+        margin: 5px 0;
+        padding: 15px 0;
+        h1{
+            color: $primaryGold;
+            font-size: 22px;
+            text-align: center;
+            letter-spacing: 3px;
+        }
+    }
+    .profile-nav{
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        grid-gap: 4px;
+        div{
+            @include divTemplate();
+            border-radius: 45% 0 0 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            h2{
+                font-size: 24px;
+            }
+        }
+    }
+
+}
+
+.profile-data{
+    width:100%;
+    @include TableStyle();
+    a{
+        color: skyblue;
+    }
+}
+
+.model-links-section{
+    div{
+        @include divTemplate();
+        h2{
+            padding: 8px 0;
+        }
+        a{
+            color: rgb(179, 174, 228);
+        }
+    }
+}
+
+.model-tube-section{
+    margin: 0;
+    padding: 0;
+    .component-nav{
+        margin: -30px 0 0 0;
+        padding: 0;
+    }
+    .model-tube-grid{
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-gap: 5px;
+        margin: 15px 0 0 0;
+        .tube-div{
+            @include divTemplate();
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 50px;
+        }
+        h2{
+            color: $primaryGold;
+        }
+    }
+}
+
+
+
+
