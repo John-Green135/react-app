@@ -1,12 +1,10 @@
 
 
 export const getPornstars = async(root_path, queries)=>{
-    let local = "http://localhost:3000" 
-    let Server = "http://localhost:3000" 
-    let response = await fetch(`${local}${buildPath(root_path, queries)}`) 
+    let response = await fetch(`${process.env.REACT_APP_SERVER}${buildPath(root_path, queries)}`) 
     let data = await response.json()
     return data
-} 
+}
 
 
 const buildPath = (root_path, queries) =>{

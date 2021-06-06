@@ -7,7 +7,6 @@ import LoadingGif from '../../Global/loadingGif'
 import CustomSelect from '../../Global/customSelect'
 
 const TubesDisplay = ()=>{
-    console.log(process.env.REACT_APP_SERVER)
     const [state, setState] = useState({
         tubes: [],
         categories: []

@@ -28,7 +28,7 @@ const PornstarProfile = (props)=>{
     }, [modelProfile])
 
     const getModelData = async(model)=>{
-        let response = await fetch(`http://localhost:3000/pornstars/profile/${model}`)
+        let response = await fetch(`${process.env.REACT_APP_SERVER}/pornstars/profile/${model}`)
         let data = await response.json()
         return data
     }

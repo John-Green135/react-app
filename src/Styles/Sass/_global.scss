@@ -30,6 +30,7 @@ button{
     //width: 1200px;
     margin: 0 auto;
     overflow-x: hidden;
+    min-height: 100vh;
     header{
         display: grid;
         grid-template-columns: 3fr 2fr;

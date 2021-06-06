@@ -19,6 +19,7 @@ export const paginate = (itemList, currentPage, itemsPerPage) => {
 }
 
 export const getPageCount = (length, itemsPerPage)=>{
+    console.log(length)
     let pageCount = 1
     let pageList = []
     let a = length % itemsPerPage
@@ -30,9 +31,8 @@ export const getPageCount = (length, itemsPerPage)=>{
     }else{
         pageCount = Math.floor( length / itemsPerPage ) + 1
     }
-    for(let i =1; i < pageCount; i++){
+    for(let i =1; i < pageCount + 1; i++){
         pageList.push(i)
     }
-
     return pageList
 }

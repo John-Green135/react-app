@@ -8,7 +8,7 @@ export const getWebcamsData = async(queries)=>{
 
     let local = "http://localhost:3000/webcams"
     let Server = "https://react-app-npc53.ondigitalocean.app/api/webcams"
-    const data = await fetch(Server + path)
+    const data = await fetch(`${process.env.REACT_APP_SERVER}/webcams${path}`)
     const response = await data.json()
     return response
 }
